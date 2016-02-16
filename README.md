@@ -27,8 +27,9 @@ This repository conatains the final project for the CSCI 3308 Software Developem
   Allocated tasked based on member's skill sets.
   
 **Requirements for Game**
- User Requirements | Functional Requirements | Non-functional Requirements
------------- | ------------ | -------------
-Content from cell 1 | Content from cell 2 | Content from cell 2
 
-Content in the first column | Content in the second column | Content in the second column
+ Requirement ID | Functional Requirements 
+--------------- | -------------- 
+Content from cell 1 | Content from cell 2
+
+Content in the first column | Content in the second column
