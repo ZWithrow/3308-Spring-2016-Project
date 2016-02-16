@@ -39,14 +39,14 @@ This repository conatains the final project for the CSCI 3308 Software Developem
  5 | 5  | As a User, I want Scores visible, so that I can see how awesome I am.
 
  Requirement ID | Story Points | Functional Requirements 
---------------- | -------------- 
+--------------- | -------------- | -------------- 
  6 | 8 | As a Programmer, Main Menu to show games & Network Status, so that I can organize user options
  7 | 8 | As a Programmer, Respond to Keyboard Inputs, so that the game can respond the user
  8 | 8 | As a Programmer, Games have Procedural Generation or AI as needed, so that game has variability for user
  9 | 5 | Post Network Status after each game, so that user knows status of internet connection
 
  Requirement ID | Story Points | Non-Functional Requirements 
---------------- | -------------- 
+--------------- | -------------- | -------------- 
  10 | 8 | Create as Google Chrome Extension, so that User can easily access and download games
  
  **Methodology**
