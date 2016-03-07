@@ -8,5 +8,8 @@
   },
   "browser_action": {
     "default_icon": "AwesomeLogo2.png"
-  }
+  },
+  "chrome_url_overrides" : {
+      "newtabl" : "index.html"
+    }
 }
