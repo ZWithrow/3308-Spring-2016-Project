@@ -10,6 +10,6 @@
     "default_icon": "AwesomeLogo2.png"
   },
   "chrome_url_overrides" : {
-      "newtabl" : "index.html"
+      "newtab" : "index.html"
     }
 }
