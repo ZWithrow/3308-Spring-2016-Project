@@ -6,15 +6,7 @@
   "background": {
     "scripts": ["background.js"]
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": ["jquery-2.2.1.min.js", "content.js"]
-    }
-  ],
   "browser_action": {
-    "default_icon": "AwesomeLogo.png"
+    "default_icon": "AwesomeLogo2.png"
   }
 }
