@@ -7,8 +7,7 @@
     "scripts": [ "background.js" ]
   },
   "browser_action": {
-    "default_icon": "AwesomeLogo2.png",
-    "default_popup": "index.html"
+    "default_icon": "AwesomeLogo2.png"
   },
   "chrome_url_overrides": {
     "newtab": "index.html"

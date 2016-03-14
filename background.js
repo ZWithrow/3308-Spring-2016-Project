@@ -9,7 +9,7 @@ chrome.broswerAction.onClicked.addListener(function(tab) {
     var activeTab = tabs[0];
     chrome.tabs.sendMessage(activeTab.id, {"message": "clicked_broswer_action"});
   });*/
-  chrome.tabs.create({"url": "index.html"});
+  chrome.tabs.create({"url": "index.html"}, function(tab){});
 });
 
 /*chrome.runtime.onMessage.addListener(
