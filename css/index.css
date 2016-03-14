@@ -1,6 +1,27 @@
+@font-face { font-family: Raleway; src: url('fonts/Raleway/Raleway-Regular.ttf'); } 
+@font-face { font-family: Source; src: url('fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf'); } 
+
 .container {
 	width: 960px;
 	margin: 0 auto;
 	text-align: center;
+}
+
+.icon_container {
+	margin-top: 5em;
+}
+
+h2 {
+	font-family: Source, sans-serif;
+}
+
+.left_icon{
+	float: left;
+	margin-left: 30%;
+}
+
+.right_icon{
+	float: right;
+	margin-right: 30%;
 }
 .canvas { background: #eee;}
