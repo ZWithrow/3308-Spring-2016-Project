@@ -6,10 +6,19 @@
   "background": {
     "scripts": [ "background.js" ]
   },
+
   "browser_action": {
-    "default_icon": "AwesomeLogo2.png"
+    "default_icon": {                    // optional
+      "19": "images/AwesomeLogo2.png"    // optional
+    },
+    "default_popup": "popup.html"
   },
+
+
+
   "chrome_url_overrides": {
     "newtab": "index.html"
   }
+
+
 }
