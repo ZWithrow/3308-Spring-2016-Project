@@ -20,8 +20,15 @@
         <p>Google Chrome can't display the webpage because your computer isn't connected to the Internet. </p>
         <h2>Why not play some games while you wait?</h2>
         <canvas id="myCanvas" width="480" height="320"></canvas>
-
-        <!--<script src="TestGame.js"></script>-->
+        <script>
+        document.querySelector("button").addEventListener("click", function(){
+    	document.querySelector("Test").style.display = "block";
+    	});
+    	</script>
+    	<div class="Test">
+        <script src="TestGame.js"></script>
+        </div>
+        <button>Show Game</button>
         <!-- Keep above code, turned off for convenience -->
 
 	</body>
