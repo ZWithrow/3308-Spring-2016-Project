@@ -12,7 +12,11 @@
 }
 
 h2 {
-	font-family: Source, sans-serif;
+	font-family: Raleway, sans-serif;
+}
+
+div{
+	display: none;
 }
 
 .left_icon{
