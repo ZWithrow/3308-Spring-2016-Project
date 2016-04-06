@@ -6,13 +6,29 @@ function toggle_visibility(id) {
       e.style.display = 'none';
 }
 
-function center(id) {
+/*function center(id) {
 	var l = document.getElementById(id);
-	if(l.style.visibility == 'visible')
-		l.style.visibility == 'hidden';
-	else
-		l.style.visibility == 'visible';
-}
+	l.animate({'left' : '0px'}), {duration : 400});
+}*/
+
+/*$(function()
+{
+  var expanded = false;
+  $('#center_icon').click(function()
+                      {
+                          if (!expanded)
+                          {
+                              $(this).animate({'left' : '0px'}, {duration : 400});
+                              expanded = true;
+                          }
+                          else
+                          {
+                             $(this).animate({'left' : '565px'}, {duration: 400});
+                              expanded = false;
+                          }
+                      });
+ });
+}*/
 
 if (navigator.onLine) {
         window.alert("online");
