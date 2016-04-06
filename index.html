@@ -10,19 +10,27 @@
 		<script type="text/javascript">
 		    function toggle_visibility(id) {
 		       var e = document.getElementById(id);
-		       if(e.style.display == 'block')
-		          e.style.display = 'none';
-		       else
+		       if(e.style.display == 'none')
 		          e.style.display = 'block';
+		       else
+		          e.style.display = 'none';
+		    }
+
+		    function center(id) {
+		    	var l = document.getElementById(id);
+		    	if(l.style.visibility == 'visible')
+		    		l.style.visibility == 'hidden';
+		    	else
+		    		l.style.visibility == 'visible';
 		    }
 		</script>
         <div class="icon_container">
 
-        <a class="left_icon" href="#" onclick="toggle_visibility('right_icon')"><img src="images/space_shooter_icon.jpg" alt="space shooter game icon" style="width:85px;height:85px"></a>
+        <a class="left_icon" id="left_icon" href="#" onclick="toggle_visibility('right_icon');toggle_visibility('center_icon');"><img src="images/space_shooter_icon.jpg" alt="space shooter game icon" style="width:85px;height:85px"></a>
 
-        <a class="center_icon"><img src="images/pong_icon.jpg" alt="pong game icon" style="width:85px;height:85px"></a>
+        <a class="center_icon" id="center_icon" href="#" onclick="toggle_visibility('right_icon');toggle_visibility('left_icon');"><img src="images/pong_icon.jpg" alt="pong game icon" style="width:85px;height:85px"></a>
 
-        <a class="right_icon" id="right_icon"><img src="images/dino_jumper_icon.jpg" alt="dino jumper game icon" style="width:85px;height:85px"></a>
+        <a class="right_icon" id="right_icon" href="#" onclick="toggle_visibility('left_icon');toggle_visibility('center_icon');"><img src="images/dino_jumper_icon.jpg" alt="dino jumper game icon" style="width:85px;height:85px"></a>
 
         </div>
 
