@@ -15,8 +15,8 @@ h2 {
 	font-family: Raleway, sans-serif;
 }
 
-div{
-	display: none;
+.center_icon{
+	margin: 0;
 }
 
 .left_icon{
@@ -27,5 +27,11 @@ div{
 .right_icon{
 	float: right;
 	margin-right: 30%;
+	display: block;
 }
-.canvas { background: #eee;}
+
+canvas { 
+	background: #eee; 
+	display: none; 
+	margin: 0 auto; 
+}

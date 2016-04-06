@@ -5,10 +5,6 @@
 		<meta chartset="utf-8">
 		<title>Party Time</title>
 		<link href="css/index.css" rel="stylesheet">
-        <style>
-            * { padding: 0; margin: 0; }
-            canvas { background: #eee; display: block; margin: 0 auto; }
-        </style>
 	</head>
 	<body class="container">
 		<script type="text/javascript">
@@ -22,11 +18,11 @@
 		</script>
         <div class="icon_container">
 
-        <a class="left_icon" href="#" onclick="toggle_visibility('myCanvas');"><img src="images/space_shooter_icon.jpg" alt="space shooter game icon" style="width:85px;height:85px"></a>
+        <a class="left_icon" href="#" onclick="toggle_visibility('myCanvas');toggle_visibility('right_icon')"><img src="images/space_shooter_icon.jpg" alt="space shooter game icon" style="width:85px;height:85px"></a>
 
-        <a><img src="images/pong_icon.jpg" alt="pong game icon" style="width:85px;height:85px"></a>
+        <a class="center_icon"><img src="images/pong_icon.jpg" alt="pong game icon" style="width:85px;height:85px"></a>
 
-        <a class="right_icon"><img src="images/dino_jumper_icon.jpg" alt="dino jumper game icon" style="width:85px;height:85px"></a>
+        <a class="right_icon" id="right_icon"><img src="images/dino_jumper_icon.jpg" alt="dino jumper game icon" style="width:85px;height:85px"></a>
 
         </div>
 
@@ -36,7 +32,7 @@
         
         <canvas id="myCanvas" width="480" height="320"></canvas>
         
-        <!-- <script src="TestGame.js"></script> -->
+        <script src="TestGame.js"></script>
         <!-- Keep above code, turned off for convenience -->
 
 	</body>
