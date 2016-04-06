@@ -9,7 +9,7 @@ This repository conatains the final project for the CSCI 3308 Software Developem
 *Idle Entertainment presents: Party Time for Those Offline.*
 
 **Vision statement**
-  Provide short, simple games to entertain internet users when their network connection is down, as well as provide status updates so they know when they can continue their normal internet use. 
+  Provide short, simple games to entertain internet users even when their network connection is down, as well as provide status updates so they know when they can continue their normal internet use. 
 
 **Objectives**
   Create Google Chrome extention for when internet is down
