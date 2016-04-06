@@ -11,14 +11,33 @@
         </style>
 	</head>
 	<body class="container">
-        <img src="images/space_shooter_icon.jpg" alt="space shooter game icon" style="width:85px;height:85px">
-        <img src="images/pong_icon.jpg" alt="pong game icon" style="width:85px;height:85px">
-        <img src="images/dino_jumper_icon.jpg" alt="dino jumper game icon" style="width:85px;height:85px">
+		<script type="text/javascript">
+		    function toggle_visibility(id) {
+		       var e = document.getElementById(id);
+		       if(e.style.display == 'block')
+		          e.style.display = 'none';
+		       else
+		          e.style.display = 'block';
+		    }
+		</script>
+        <div class="icon_container">
+
+        <a class="left_icon" href="#" onclick="toggle_visibility('myCanvas');"><img src="images/space_shooter_icon.jpg" alt="space shooter game icon" style="width:85px;height:85px"></a>
+
+        <a><img src="images/pong_icon.jpg" alt="pong game icon" style="width:85px;height:85px"></a>
+
+        <a class="right_icon"><img src="images/dino_jumper_icon.jpg" alt="dino jumper game icon" style="width:85px;height:85px"></a>
+
+        </div>
+
         <h2>Unable to Connect to the internet</h2>
         <p>Google Chrome can't display the webpage because your computer isn't connected to the Internet. </p>
         <h2>Why not play some games while you wait?</h2>
+        
         <canvas id="myCanvas" width="480" height="320"></canvas>
+        
+        <!-- <script src="TestGame.js"></script> -->
+        <!-- Keep above code, turned off for convenience -->
 
-        <script src="TestGame.js"></script>
 	</body>
 </html>
