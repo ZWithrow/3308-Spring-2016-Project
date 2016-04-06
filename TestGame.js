@@ -19,6 +19,7 @@ var brickPadding = 10;
 var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
 var bricks = [];
+var space = false;
 for (c = 0; c < brickColumnCount; c++) {
     bricks[c] = [];
     for (r = 0; r < brickRowCount; r++) {
@@ -28,6 +29,8 @@ for (c = 0; c < brickColumnCount; c++) {
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
+
+
 
 function drawBall() {
     ctx.beginPath();
@@ -51,6 +54,9 @@ function keyDownHandler(e) {
     else if (e.keyCode == 37) {
         leftPressed = true;
     }
+    else if (e.keyCode == 32) {
+        space = true;
+    }
 }
 
 function keyUpHandler(e) {
@@ -60,6 +66,7 @@ function keyUpHandler(e) {
     else if (e.keyCode == 37) {
         leftPressed = false;
     }
+
 }
 function drawBricks() {
     for (c = 0; c < brickColumnCount; c++) {
@@ -71,7 +78,7 @@ function drawBricks() {
                 bricks[c][r].y = brickY;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "#0095DD";
+                ctx.fillStyle = "#696969";
                 ctx.fill();
                 ctx.closePath();
             }
@@ -91,8 +98,20 @@ function collisionDetection() {
         }
     }
 }
+function spaceBar() {
+    if (space == false) {
+        setTimeout(spaceBar, 50);
+        clearInterval(timer1)
+        return;
+    }
+    timer1 = setInterval(draw, 10);
+
+}
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
+    if (space == false) {
+        spaceBar();
+    }
     drawBall();
     drawPaddle();
     drawBricks();
@@ -108,7 +127,8 @@ function draw() {
             dy = -(dy)-0.5;
         }
         else {
-            alert("Game Over");
+            //alert("Game Over");
+            space = false;
             document.location.reload();
         }
         
@@ -123,5 +143,4 @@ function draw() {
     x += dx;
     y += dy;
 }
-
-setInterval(draw, 10);
+var timer1 = setInterval(draw, 10);
