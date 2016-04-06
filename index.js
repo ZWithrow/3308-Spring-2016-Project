@@ -7,9 +7,20 @@ function toggle_visibility(id) {
 }
 
 function center(id) {
-	var l = document.getElementById(id);
-	if(l.style.visibility == 'visible')
-		l.style.visibility == 'hidden';
+	var e = document.getElementById(id);
+	if(e.style.marginLeft == '85px')
+		e.style.marginLeft == '438px';
 	else
-		l.style.visibility == 'visible';
+		e.style.marginLeft == '85px';
 }
+
+if (navigator.onLine) {
+        window.alert("online");
+} else {
+        window.alert("offline");
+}
+
+
+window.addEventListener("offline", function(e) {window.alert("offline"); });
+window.addEventListener("online", function(e) {window.alert("online"); });
+
