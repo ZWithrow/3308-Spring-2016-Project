@@ -14,8 +14,6 @@
     "default_popup": "partyTimePopUp.html"
   },
 
-
-
   "chrome_url_overrides": {
     "newtab": "index.html"
   }
