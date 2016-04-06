@@ -196,6 +196,7 @@ function draw() {
     else if (upPressed && shipPlacementY > 0) {
         shipPlacementY -= 3;
     }
+
     updateScore();
     laserX += 1;
 }
