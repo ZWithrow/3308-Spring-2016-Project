@@ -7,6 +7,18 @@
 		<link href="css/index.css" rel="stylesheet">
 	</head>
 	<body class="container">
+		<!--<script>
+			if (navigator.onLine) {
+				window.alert("online");
+			} else {
+				window.alert("offline");
+			}
+		</script>-->
+		<script>
+			window.addEventListener("offline", function(e) {window.alert("offline"); });
+			window.addEventListener("online", function(e) {window.alert("online"); });
+		</script>
+
 		<script type="text/javascript">
 		    function toggle_visibility(id) {
 		       var e = document.getElementById(id);
