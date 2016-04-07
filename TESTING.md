@@ -19,7 +19,7 @@ N/A
 | **Description:** | Description here |
 
 
-| ----- | ----- |
+ -------------- | -------------- 
 | **Users:** | Google Chrome User |
 | **Pre-Conditions:** | pre-conditions here |
 | **Post-Conditions:** | here |
@@ -34,13 +34,7 @@ Flow of Events | Actor Action |  System Response | Comments
  | 3. action | response | comment
  | 4. action | response | comment
 
- **Flow of Events:** | **Actor Action** | **System Response** | **Comments** 
- | 1. action | response | comment 
- | 2. action | response | comment 
- | 3. action | response | comment 
- | 4. action | response | comment 
- 
- 
+ -------------- | -------------- 
 | **Test Passed:** | Pass/Fail |
 | **Notes and Issues:** | notes |
 
