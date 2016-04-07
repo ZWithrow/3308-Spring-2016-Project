@@ -10,9 +10,10 @@ Party Time for Those Offline
 Provide short, simple games to entertain internet users even when their network connection is down or just when users are bored, as well as provide status updates so they know when they can continue their normal internet use.
 
 #### Automated Tests
-N/A
+For automated testing, we used Jasminse, a JavaScript testing framework. To run the tests, bring up SpecRunner.html (located in the testing folder) in a browser. We tested our game code's ability to detect keys being pressed and released. Here is a screenshot of the testing output:
+![alt-tag](link)
 
-<<<<<<< HEAD
+
 #### User Acceptance 1
 | Info | Our Info |
 | -----: | :----- |
