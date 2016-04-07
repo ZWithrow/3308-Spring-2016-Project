@@ -32,20 +32,20 @@ _______
 
 Flow of Events | Actor Action |  System Response | Comments
 --------------- | -------------- | -------------- | -------------- 
- | 1. Visit GitHub Repository at https://github.com/ZWithrow/3308-Spring-2016-Project/tree/master | Website shown |  
+ | 1. Visit GitHub Repository at https://github.com/ZWithrow/3308-Spring-2016-Project/tree/master | Website shown |  -
  | 2. Download to local machine by clicking Download ZIP in upper right hand corner of screen | zip file with program will download to user-specified repository | User can move code to new repository if it downloads in an undesirable place
- | 3. User unzips file | Folder created with entire program enclosed | -
- | 4. action | response | comment
+ | 3. User unzips file | Folder created with entire program enclosed | It is vital to move the programs enclosing folder to its final desired directory before continuing. Chrome doesn't track files that are moved after unpacking step preformed in the next step.
+ | 4. Open Google Chrome, navigate to extensions folder(in settings), Select "Developer Mode" checkbox towards upper right of screen, click "Load Packed Extension", select freshly unzipped folder, and select "Enable" next to new extension if it isn't already checked | Google Chrome unpacks extension then adds it to Chrome, and should by default enable the extension for standard Google Chrome use. | Party Hat Icon will appear in upper right corner of Google Chrome with any other previously existing images.
 
 
 _______
 
 
 
- ResSulLt ISsUeEs  | Our Results
+ Observations  | Our Results
 --------------- | --------------
- **Test Passed:** | Pass/Fail 
- **Notes and Issues:** | notes 
+ **Test Passed:** | Pass 
+ **Notes and Issues:** | No issues if directions are followed. Only works in Google Chrome. If the directory is moved or deleted after adding the extension to Chrome it will not work, though the name may still appear in Google Chrome Extension List temporarily.
 
 
 
