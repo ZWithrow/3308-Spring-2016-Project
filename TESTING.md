@@ -19,7 +19,7 @@ N/A
 | **Description:** | Description here |
 
 
-| ---: | :--- |
+| ----- | ----- |
 | **Users:** | Google Chrome User |
 | **Pre-Conditions:** | pre-conditions here |
 | **Post-Conditions:** | here |
@@ -27,10 +27,21 @@ N/A
 
 
 
-| **Flow of Events:** | **Actor Action** | **System Response** | **Comments** |
-| | 1. action | response | comment |
-| | 2. action | response | comment |
-| | 3. action | response | comment |
-| | 4. action | response | comment |
+ **Flow of Events:** | **Actor Action** | **System Response** | **Comments** 
+ | 1. action | response | comment 
+ | 2. action | response | comment 
+ | 3. action | response | comment 
+ | 4. action | response | comment 
+ 
+ 
 | **Test Passed:** | Pass/Fail |
 | **Notes and Issues:** | notes |
+
+
+
+
+
+
+ Requirement ID | Story Points | Functional Requirements 
+--------------- | -------------- | -------------- 
+ 6 | 8 | As a Programmer, Main Menu to show games & Network Status, so that I can organize user options
