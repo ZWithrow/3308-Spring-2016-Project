@@ -18,14 +18,14 @@ N/A
 | **Use Case Name:** | Name here |
 | **Description:** | Description here |
 
-
+|Background Info | Our Application Info|
  -------------- | -------------- 
 | **Users:** | Google Chrome User |
 | **Pre-Conditions:** | pre-conditions here |
 | **Post-Conditions:** | here |
 | **Frequency of Use:** | here |
 
-
+_______
 
 Flow of Events | Actor Action |  System Response | Comments
 --------------- | -------------- | -------------- | -------------- 
@@ -34,15 +34,12 @@ Flow of Events | Actor Action |  System Response | Comments
  | 3. action | response | comment
  | 4. action | response | comment
 
- -------------- | -------------- 
-| **Test Passed:** | Pass/Fail |
-| **Notes and Issues:** | notes |
+
+_______
 
 
 
-
-
-
- Requirement ID | Story Points | Functional Requirements 
---------------- | -------------- | -------------- 
- 6 | 8 | As a Programmer, Main Menu to show games & Network Status, so that I can organize user options
+ ResSulLt ISsUeEs  | Our Results
+--------------- | --------------
+ **Test Passed:** | Pass/Fail 
+ **Notes and Issues:** | notes 
