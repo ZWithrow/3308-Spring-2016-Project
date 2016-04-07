@@ -53,4 +53,4 @@ This repository conatains the final project for the CSCI 3308 Software Developem
  Agile method.
  
  **Project Tracking Software**
-  GitHub Issues and Milestones. We will add these as they arise and deadlines are more clear. 
+  [Trello](https://trello.com/b/2ivhNpnx/3308-project)
