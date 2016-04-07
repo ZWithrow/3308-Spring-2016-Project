@@ -12,6 +12,7 @@ Provide short, simple games to entertain internet users even when their network 
 #### Automated Tests
 N/A
 
+<<<<<<< HEAD
 #### User Acceptance 1
 | Info | Our Info |
 | -----: | :----- |
@@ -136,3 +137,4 @@ _______
 --------------- | --------------
  **Test Passed:** | Pass/Fail 
  **Notes and Issues:** | notes 
+
