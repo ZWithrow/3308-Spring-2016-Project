@@ -38,9 +38,4 @@ if (navigator.onLine) {
 
 
 window.addEventListener("offline", function(e) {window.alert("offline"); });
-<<<<<<< HEAD
 window.addEventListener("online", function(e) {window.alert("online"); });
-
-=======
-window.addEventListener("online", function(e) {window.alert("online"); });
->>>>>>> staging
