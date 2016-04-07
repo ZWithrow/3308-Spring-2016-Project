@@ -20,6 +20,7 @@ var asteroidCounter = 0;
 var timer = 0;
 var timer2 = 0;
 var Score = 0;
+var START = true;
 for (b = 0; b <= 99; b++) {
     Lasers[b] = { x: laserX, y: laserY, hit: false };
     asteroids[b] = { x: 600, y: 600, dx: 1 * Math.floor((Math.random() * 4) + 1), hit: false, Xsize: Math.random() * 20 + 10, Ysize: Math.random() * 20 + 10 };
@@ -52,7 +53,6 @@ function keyDownHandler(e) {
         spaceStop = true;
     }
 }
-
 function keyUpHandler(e) {
     if (e.keyCode == 38) {
         upPressed = false;
@@ -65,14 +65,22 @@ function keyUpHandler(e) {
 
     }
 }
-
 function spaceBar() {
     if (spaceStop == false) {
         setTimeout(spaceBar, 50);
         clearInterval(timer1)
         return;
     }
+    START = false;
     timer1 = setInterval(draw, 10);
+}
+function finalWait() {
+    if (spaceStop == false) {
+        setTimeout(finalWait, 50);
+        clearInterval(timer1)
+        return;
+    }
+    timer1 = setInterval(GameOver, 10);
 }
 function fireLaser() {
     if (space == true) {
@@ -126,7 +134,9 @@ function showAsteroids() {
             asteroids[i].x = asteroidpx;
             ctx.beginPath();
             //ctx.arc(asteroidpx, asteroids[i].y, ballRadius, 0, Math.PI * 2);
-            ctx.rect(asteroidpx, asteroids[i].y, asteroids[i].Xsize, asteroids[i].Xsize);
+            ctx.rect(asteroidpx, asteroids[i].y+0.25*asteroids[i].Xsize, asteroids[i].Xsize, asteroids[i].Xsize/2);
+            ctx.rect(asteroidpx + 0.25 * asteroids[i].Xsize, asteroids[i].y, asteroids[i].Xsize / 2, asteroids[i].Xsize);
+            ctx.rect(asteroidpx + 0.1 * asteroids[i].Xsize, asteroids[i].y + 0.1 * asteroids[i].Xsize, 0.8*asteroids[i].Xsize, 0.8*asteroids[i].Xsize);
             ctx.fillStyle = "#696969";
             ctx.fill();
             ctx.closePath();
@@ -134,6 +144,9 @@ function showAsteroids() {
         }
         i++;
     }
+}
+function GameOver() {
+    document.location.reload();
 }
 
 function collisionDetection() {
@@ -150,14 +163,34 @@ function collisionDetection() {
             }
 
         }
+        if (Aster.hit == false){
+            if ((shipPlacementX + shipWidth > Aster.x && shipPlacementX < Aster.x + Aster.Xsize && shipPlacementY < Aster.y + Aster.Ysize && shipPlacementY + shipHeight > Aster.y) || (shipPlacementX + shipHeight > Aster.x && shipPlacementX < Aster.x + Aster.Xsize && shipPlacementY + 11 < Aster.y - Aster.Ysize && shipPlacementY + 24 > Aster.y)) {
+                ctx.font = "55px Impact";
+                ctx.fillStyle = "black";
+                ctx.fillText("GAME OVER", 480 / 2 - 125, 480 / 2);
+                spaceStop = false;
+                if (spaceStop == false) {
+                    finalWait();
+                }
+            }
+        }
+        
     }
 }
 function updateScore() {
-    ctx.font = "30px Arial";
+    ctx.font = "30px Impact";
+    ctx.fillStyle = "black";
     ctx.fillText("Score : " + Score, 25, 25);
 }
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
+    updateScore();
+    if (START == true){
+        ctx.font = "55px Impact";
+        ctx.fillText("Start Game", 480 / 2 - 125, 480 / 2);
+        ctx.font = "20px Impact";
+        ctx.fillText("by pressing SPACEBAR", 480 / 2 - 90, 480 / 2 + 30);
+    }
     if (spaceStop == false) {
         spaceBar();
     }
@@ -197,7 +230,7 @@ function draw() {
         shipPlacementY -= 3;
     }
 
-    updateScore();
+    
     laserX += 1;
 }
 var timer1 = setInterval(draw, 10);
