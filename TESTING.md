@@ -19,6 +19,8 @@ N/A
 | **Use Case Name:** | Name here |
 | **Description:** | Description here |
 
+___________
+
 |Background Info | Our Application Info|
  -------------- | -------------- 
 | **Users:** | Google Chrome User |
