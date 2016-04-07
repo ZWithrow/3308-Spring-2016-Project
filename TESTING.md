@@ -27,6 +27,13 @@ N/A
 
 
 
+Flow of Events | Actor Action |  System Response | Comments
+--------------- | -------------- | -------------- | -------------- 
+ | 1. action | response | comment
+ | 2. action | response | comment
+ | 3. action | response | comment
+ | 4. action | response | comment
+
  **Flow of Events:** | **Actor Action** | **System Response** | **Comments** 
  | 1. action | response | comment 
  | 2. action | response | comment 
