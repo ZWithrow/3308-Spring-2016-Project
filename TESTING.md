@@ -13,9 +13,10 @@ Provide short, simple games to entertain internet users even when their network 
 N/A
 
 #### User Acceptance 
-**Use Case ID:** UC-01
-**Use Case Name:** Name here
-**Description:** Description here 
+**Use Case ID:** | UC-01
+**Use Case Name:** | Name here
+**Description:** | Description here 
+
 **Users:** Google Chrome User 
 **Pre-Conditions:** pre-conditions here
 **Post-Conditions:** here 
