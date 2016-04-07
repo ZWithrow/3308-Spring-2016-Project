@@ -50,7 +50,9 @@ This repository conatains the final project for the CSCI 3308 Software Developem
  10 | 8 | Create as Google Chrome Extension, so that User can easily access and download games
  
  **Methodology**
+ 
  Agile method.
  
  **Project Tracking Software**
+ 
   [Trello](https://trello.com/b/2ivhNpnx/3308-project)
