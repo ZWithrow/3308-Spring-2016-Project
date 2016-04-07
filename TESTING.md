@@ -13,7 +13,8 @@ Provide short, simple games to entertain internet users even when their network 
 N/A
 
 #### User Acceptance 
-| ---: | :--- |
+| Info | Our Info |
+| -----: | :----- |
 | **Use Case ID:** | UC-01 |
 | **Use Case Name:** | Name here |
 | **Description:** | Description here |
