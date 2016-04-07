@@ -25,9 +25,9 @@ N/A
 | **Post-Conditions:** | here |
 | **Frequency of Use:** | here |
 | **Flow of Events:** | **Actor Action** | **System Response** | **Comments** |
-| | 1. action | response | comment |
-| | 2. action | response | comment |
-| | 3. action | response | comment |
-| | 4. action | response | comment |
+| --- | 1. action | response | comment |
+| --- | 2. action | response | comment |
+| --- | 3. action | response | comment |
+| --- | 4. action | response | comment |
 | **Test Passed:** | Pass/Fail |
 | **Notes and Issues:** | notes |
