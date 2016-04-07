@@ -11,7 +11,7 @@ Provide short, simple games to entertain internet users even when their network 
 
 #### Automated Tests
 For automated testing, we used Jasminse, a JavaScript testing framework. To run the tests, bring up SpecRunner.html (located in the testing folder) in a browser. We tested our game code's ability to detect keys being pressed and released. Here is a screenshot of the testing output:
-![alt-tag](link)
+![alt-tag](https://github.com/ZWithrow/3308-Spring-2016-Project/blob/master/testing/PassedTests.png)
 
 
 #### User Acceptance 1
