@@ -1,9 +1,10 @@
-// var app = chrome.runtime.getBackgroundPage();
+// if (navigator.onLine) {
+//         window.alert("online");
+// }
+// else {
+//         window.alert("offline");
+// }
 
-function hello() {
-  chrome.tabs.executeScript({
-    file: 'alert.js'
-  }); 
-}
 
-document.getElementById('clickme').addEventListener('click', hello);
+// window.addEventListener("offline", function(e) {window.alert("offline"); });
+// window.addEventListener("online", function(e) {window.alert("online"); });
