@@ -5,61 +5,52 @@
 		<title>
             Header
 		</title>
-        <link href="css/partyTimePopUp.css" rel="stylesheet">
+        <link href="css/partyTimePopUp.css" rel="stylesheet" type='text/css'>
+        <script src="partyTimePopUp.js"></script>
 	</head>
 
 	<body class="container">
 
-        <p>
-        <a class="testLink" href = "http://www.speedtest.net/" target="_blank" > Boobies. </a>
-        </p>
 
-        <p>Open <a href="http://speedtest.net" target="_blank">this page</a> and then </p>
+        <div = class="internetContainer">
+            <p> 
+            <a class="internetContainer" href = "http://www.speedtest.net/" target="_blank" > To test you're internet speeds via speedtest.net, click here.. </a>
+            </p>
+        </div>
         
+
+
+        <!-- This is Michael's code for games. Try to link to start a game with each individual icon.
+        <div = class="gamePageContainer">
+            <a class="left_icon" id="left_icon" href="#" onclick="toggle_visibility('right_icon');toggle_visibility('center_icon');"><img src="images/space_shooter_icon.jpg" alt="space shooter game icon" style="width:85px;height:85px"></a>
+
+            <a class="center_icon" id="center_icon" href="#" onclick="toggle_visibility('right_icon');toggle_visibility('left_icon');"><img src="images/pong_icon.jpg" alt="pong game icon" style="width:85px;height:85px"></a>
+
+            <a  class="right_icon" 
+                id="right_icon"
+                href="#" 
+                onclick="toggle_visibility('left_icon');toggle_visibility('center_icon');">
+                <img src="images/dino_jumper_icon.jpg" 
+                alt="dino jumper game icon" 
+                style="width:85px;height:85px">
+            </a>
+        </div>
+ -->
+        <p>Open <a href="http://speedtest.net" target="_blank">this page</a> and then </p>
+    
         <p>
-        <button id="Test\n">Boobies</button>
+        <button id="Test\n">Balls</button>
         <a class="testLink" href = "http://www.speedtest.net/" target="_blank" > Boobies. </a>
-
-
-        <button type="button" onclick="alert('Hello world!')">Click Me!</button>
-        <!--
-        <script type="text/javascript" src="popup.js"></script>
-        -->
         </p>
+        <button type="button" onclick="alert('Hello world!')">Click Me!</button>
+        <script type="text/javascript" src="popup.js"></script>
+
+        <!-- Buttons don't seem to work in an extension popup
+        <button type="button" onclick="alert('Hello world!')">Click Me!</button>
+        
+        -->
+
+
 
     </body>
 </html>
-
-
-<!--
-
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <title>Noisli</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,300' rel='stylesheet' type='text/css' async>
-    <link href='css/style.css' rel='stylesheet' type='text/css'>
-    <link href='css/login.css' rel='stylesheet' type='text/css'>
-    <link href='css/combos.css' rel='stylesheet' type='text/css'>
-    <link href='css/offline.css' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="lib/jquery-2.1.4.js"></script>
-  </head> 
-  <body>
-    <div id="popup-content">
-    </div>
-    <script type="text/javascript" src="js/analytics.js"></script>
-    <script type="text/javascript" src="js/popup.js"></script>
-    <script type="text/javascript" src="js/popup/login.js"></script>
-    <script type="text/javascript" src="js/popup/combos.js"></script>
-    <script type="text/javascript" src="js/popup/offline.js"></script>
-  </body>
-</html>
-
-
-
-
-
-
--->
