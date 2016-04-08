@@ -1,0 +1,19 @@
+.testLink{
+	margin-top:2em;
+	text-indent: 50px;
+}
+
+.container{
+	width: 400px;
+	height: 200px;
+	background-color:lightblue;
+	/*text-indent: 50px;*/
+}
+
+.internetContainer{
+	text-align: center;
+}
+
+.gamePageContainer{
+	text-align: center;
+}
