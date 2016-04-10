@@ -198,7 +198,19 @@ function draw() {
     if (timer == 25) {
         timer = 0;
     }
-    if (timer2 == 50) {
+    if (Score <= 100 && timer2 == 50) {
+        timer2 = 0;
+    }
+    else if (Score <= 200 && Score > 100 && timer2 == 40) {
+        timer2 = 0;
+    }
+    else if (Score <= 300 && Score > 200 && timer2 == 30) {
+        timer2 = 0;
+    }
+    else if (Score <= 400 && Score > 300 && timer2 == 30) {
+        timer2 = 0;
+    }
+    else if (Score > 400 && timer2 == 20) {
         timer2 = 0;
     }
     drawShip();
