@@ -3,11 +3,12 @@
 	text-indent: 50px;
 }
 
-.container{
+
+.popUpContainer{
 	width: 400px;
-	height: 200px;
-	background-color:lightblue;
-	/*text-indent: 50px;*/
+	height: 150px;
+	background:lightblue;
+	text-align: center;
 }
 
 .internetContainer{
