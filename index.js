@@ -1,53 +1,56 @@
 window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('left_icon').addEventListener('click', function () {
+       icon = document.getElementById('left_icon');
        icon1 = document.getElementById('center_icon');
        icon2 = document.getElementById('right_icon');
-       iconmargin = document.getElementById('left_icon').style.marginLeft
+       canvas = document.getElementById('myCanvas');
        if (icon1.style.display == 'block'){
         icon1.style.display = 'none';
         icon2.style.display = 'none';
+        icon.style.marginLeft = '438px';
+        canvas.style.display = 'block';
        }
        else {
         icon1.style.display = 'block';
         icon2.style.display = 'block';
+        icon.style.marginLeft = '267px';
+        canvas.style.display = 'none';
        }
-       if (iconmargin == "267px"){
-        iconmargin = "438px";
-       }
-       else {
-        iconmargin = "267px";
-       }
+
     }, false);
 
     document.getElementById('center_icon').addEventListener('click', function () {
+       icon = document.getElementById('center_icon');
        icon1 = document.getElementById('left_icon');
        icon2 = document.getElementById('right_icon');
        if (icon1.style.display == 'block'){
         icon1.style.display = 'none';
         icon2.style.display = 'none';
+        icon.style.marginLeft = '438px';
        }
        else {
         icon1.style.display = 'block';
         icon2.style.display = 'block';
+        icon.style.marginLeft = '85px';
        }
     }, false);
 
     document.getElementById('right_icon').addEventListener('click', function () {
+       icon = document.getElementById('right_icon');
        icon1 = document.getElementById('left_icon');
        icon2 = document.getElementById('center_icon');
        if (icon1.style.display == 'block'){
         icon1.style.display = 'none';
         icon2.style.display = 'none';
+        icon.style.marginLeft = '438px';
        }
        else {
         icon1.style.display = 'block';
         icon2.style.display = 'block';
+        icon.style.marginLeft = '85px';
        }
     }, false);
 
-    /*document.getElementById('left_icon').addEventListener('click', function () {
-      document.getElementById('right_icon').style.display = 'none';
-    }, false);*/
 }, false);
 
 
