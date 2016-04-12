@@ -6,5 +6,5 @@
 // }
 
 
-// window.addEventListener("offline", function(e) {window.alert("offline"); });
-// window.addEventListener("online", function(e) {window.alert("online"); });
+window.addEventListener("offline", function(e) {window.alert("offline"); });
+window.addEventListener("online", function(e) {window.alert("online"); });
