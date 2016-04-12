@@ -1,10 +1,30 @@
 .testLink{
 	margin-top:2em;
+	text-indent: 50px;
 }
 
-.container{
-	width: 250px;
-	height: 400px;
-	background-color:lightblue;
+
+.popUpContainer{
+	width: 400px;
+	height: 150px;
+	background:lightblue;
+	text-indent: 50px;
 }
 
+.internetContainer{
+	width: 400px;
+	height: 200px;
+	text-align: center;
+}
+
+.gamePageContainer{
+	text-align: center;
+}
+
+.online {
+	display: none;
+}
+
+.offline {
+	display: none;
+}
