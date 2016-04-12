@@ -11,12 +11,20 @@
 	text-indent: 50px;
 }
 
-/*.internetContainer{
+.internetContainer{
 	width: 400px;
 	height: 200px;
 	text-align: center;
-}*/
+}
 
 .gamePageContainer{
 	text-align: center;
+}
+
+.online {
+	display: none;
+}
+
+.offline {
+	display: none;
 }

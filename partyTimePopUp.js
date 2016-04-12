@@ -1,21 +1,10 @@
-// if (navigator.onLine) {
-//         window.alert("online");
-// }
-// else {
-//         window.alert("offline");
-// }
-
 if (navigator.onLine) {
-	document.getElementById(network).innerHTML = "network status: online"
+	document.getElementById('online').style.display = 'block';
+	document.getElementById('offline').style.display = 'none';
 } else {
-	document.getElementById(network).innerHTML = "network status: offline"
+	document.getElementById('offline').style.display = 'block';
+	document.getElementById('online').style.display = 'none';
 }
-
-if(navigator.online){
-	document.write(nline yo.)
-}
-
-document.write(5 + 6);
 
 
 window.addEventListener("offline", function(e) {window.alert("offline"); });
