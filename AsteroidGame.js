@@ -125,6 +125,7 @@ function makeAsteroid() {
     asteroids[asteroidCounter].y = ly;
     asteroidCounter++;
     timer2++;
+    
 }
 function showAsteroids() {
     var i = 0;

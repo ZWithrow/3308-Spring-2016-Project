@@ -140,6 +140,10 @@ function draw() {
         ctx.font = "20px Impact";
         ctx.fillText("by pressing SPACEBAR", 480 / 2 - 90, 480 / 2 + 30);
     }
+    else {
+        ctx.font = "20px Impact";
+        ctx.fillText("Use arrows to move.......Press 'r' to refresh the page", 33, 480 - 5);
+    }
     if (Reset == true){
         refresh();
     }
