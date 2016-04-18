@@ -1,5 +1,5 @@
 /// JavaScript source code
-var canvas = document.getElementById("myCanvas");
+var canvas = document.getElementById("myCanvas3");
 var ctx = canvas.getContext("2d");
 var space = false;
 
@@ -9,27 +9,18 @@ var upPressed = false;
 var rightPressed = false;
 var leftPressed = false;
 
-var snakeButtSize = 60;
-var numOfSnakeButts = 0;
+var snakeButtSize = 20;
+var numOfSnakeButts = 1;
 var SnakeButts=[];
 var Score = 0;
 var START = true;
-SnakeButts[0] = {x:20, y:20}
-
+SnakeButts[0] = {x :20, y:20 , added : true}
+for (i = 1; i < 100; i++) {
+    SnakeButts[i] = { x: 20, y: 20, added: false }
+}
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-
-function drawSnake() {
-    var i = 0;
-    while (i <= numOfSnakeButts ){
-        ctx.beginPath();
-        ctx.rect(SnakeButts[i].x, SnakeButts[i].y, snakeButtSize, snakeButtSize);
-        ctx.fillStyle = "#696969";
-        ctx.fill();
-        ctx.closePath();
-    }
-}
 
 function keyDownHandler(e) {
     if (e.keyCode == 38) {
@@ -79,6 +70,19 @@ function updateScore() {
     ctx.font = "30px Impact";
     ctx.fillStyle = "black";
     ctx.fillText("Score : " + Score, 25, 25);
+}
+function drawSnake() {
+    var i = 0;
+    while (i < numOfSnakeButts) {
+        if (SnakeButts[i].added == true) {
+            ctx.beginPath();
+            ctx.rect(SnakeButts[i].x, SnakeButts[i].y, snakeButtSize, snakeButtSize);
+            ctx.fillStyle = "#696969";
+            ctx.fill();
+            ctx.closePath();
+        }
+        i++;
+    }
 }
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)

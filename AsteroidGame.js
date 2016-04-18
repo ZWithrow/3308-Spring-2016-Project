@@ -1,5 +1,5 @@
 /// JavaScript source code
-var canvas = document.getElementById("myCanvas");
+var canvas = document.getElementById("myCanvas1");
 var ctx = canvas.getContext("2d");
 var x = canvas.width / 2;
 var y = canvas.height - 30;
@@ -149,7 +149,6 @@ function showAsteroids() {
 function GameOver() {
     document.location.reload();
 }
-
 function collisionDetection() {
     for (a = 0; a < 100; a++) {
         for (l = 0; l < 100; l++) {
