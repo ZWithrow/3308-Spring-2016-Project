@@ -36,6 +36,6 @@ h2 {
 
 canvas { 
 	background: #eee; 
-	display: block; 
+	display: none; 
 	margin: 0 auto; 
 }
