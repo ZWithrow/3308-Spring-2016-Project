@@ -21,7 +21,7 @@ var timer = 0;
 var timer2 = 0;
 var Score = 0;
 var START = true;
-for (b = 0; b <= 99; b++) {
+for (b = 0; b <= 399; b++) {
     Lasers[b] = { x: laserX, y: laserY, hit: false };
     asteroids[b] = { x: 600, y: 600, dx: 1 * Math.floor((Math.random() * 4) + 1), hit: false, Xsize: Math.random() * 20 + 10, Ysize: Math.random() * 20 + 10 };
 }
@@ -98,7 +98,7 @@ function fireLaser() {
 function showLasers() {
     var i = 0;
 
-    while (i < 100) {
+    while (i < 400) {
         if (Lasers[i].hit == false) {
             var laserpx = Lasers[i].x + 2;
             var laserpy = Lasers[i].y;
@@ -115,7 +115,7 @@ function showLasers() {
 
 }
 function makeAsteroid() {
-    if (asteroidCounter == 100) {
+    if (asteroidCounter == 400) {
         asteroidCounter = 0;
     }
     var lx = 500;
@@ -129,7 +129,7 @@ function makeAsteroid() {
 function showAsteroids() {
     var i = 0;
 
-    while (i < 100) {
+    while (i < 400) {
         if (asteroids[i].hit == false) {
             var asteroidpx = asteroids[i].x - asteroids[i].dx;
             asteroids[i].x = asteroidpx;
