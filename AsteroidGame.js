@@ -1,12 +1,12 @@
 /// JavaScript source code
-var canvas = document.getElementById("myCanvas");
+var canvas = document.getElementById("myCanvas1");
 var ctx = canvas.getContext("2d");
 var x = canvas.width / 2;
 var y = canvas.height - 30;
 var space = false;
 var spaceStop = false;
-var rightPressed = false;
-var leftPressed = false;
+var downPressed = false;
+var upPressed = false;
 var shipHeight = 60;
 var shipWidth = 12;
 var shipPlacementX = (canvas.width - shipWidth) / 16;
@@ -120,6 +120,7 @@ function makeAsteroid() {
     }
     var lx = 500;
     var ly = Math.floor((Math.random() * 40) + 1) * 12;
+    asteroids[asteroidCounter].hit = false;
     asteroids[asteroidCounter].x = lx;
     asteroids[asteroidCounter].y = ly;
     asteroidCounter++;
@@ -128,7 +129,7 @@ function makeAsteroid() {
 function showAsteroids() {
     var i = 0;
 
-    while (i < asteroidCounter) {
+    while (i < 100) {
         if (asteroids[i].hit == false) {
             var asteroidpx = asteroids[i].x - asteroids[i].dx;
             asteroids[i].x = asteroidpx;
@@ -148,7 +149,6 @@ function showAsteroids() {
 function GameOver() {
     document.location.reload();
 }
-
 function collisionDetection() {
     for (a = 0; a < 100; a++) {
         for (l = 0; l < 100; l++) {
@@ -230,9 +230,9 @@ function draw() {
         makeAsteroid();
     }
     timer2++;
-    if (asteroidCounter != 0) {
-        showAsteroids();
-    }
+    
+    showAsteroids();
+    
 
     collisionDetection();
     if (downPressed && shipPlacementY < canvas.height - shipHeight) {
