@@ -1,3 +1,6 @@
+/**@file This is the javascript file for the main menu page.
+* It listens for clicks on each of the three icons, and if one of them is clicked 
+* it takes the user to the game idicated by that icon (or back to the main page).*/
 window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('left_icon').addEventListener('click', function () {
        icon = document.getElementById('left_icon');
