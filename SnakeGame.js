@@ -1,4 +1,10 @@
 /// JavaScript source code
+/**@file This is the javascript for the etch-e-sketch game.
+* The four arrow keys cause the drawer to move, leaving a "sketch" behind it.
+* The space bar starts the game. The letter r resets the canvas to blank.
+* The user plays until he/she wants to stop (presses r).*/
+
+/**Game canvas (square the game is displayed on on the HTML page)*/
 var canvas = document.getElementById("myCanvas3");
 var ctx = canvas.getContext("2d");
 var space = false;
@@ -28,9 +34,12 @@ for (i = 0; i < 88; i++) {
     }  
 }
 
+/**Listening for user key strokes*/
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
+/**See which, if any, keys have been pressed.
+* Only dealing with arrow keys, space bar, and the letter r.*/
 function keyDownHandler(e) {
     if (e.keyCode == 38) {
         upPressed = true;
@@ -52,6 +61,9 @@ function keyDownHandler(e) {
         Reset = true;
     }
 }
+
+/**See which, if any, keys have been released.
+* Only dealing with arrow keys, space bar, and the letter r.*/
 function keyUpHandler(e) {
     if (e.keyCode == 38) {
         upPressed = false;
@@ -72,6 +84,8 @@ function keyUpHandler(e) {
         Reset = false;
     }
 }
+
+/**When the space bar is pressed, start the game (allow user to move drawer).*/
 function spaceBar() {
     if (spaceStop == false) {
         setTimeout(spaceBar, 50);
@@ -81,6 +95,8 @@ function spaceBar() {
     START = false;
     timer1 = setInterval(draw, 40);
 }
+
+/**NEED ZACH*/
 function finalWait() {
     if (spaceStop == false) {
         setTimeout(finalWait, 50);
@@ -89,14 +105,20 @@ function finalWait() {
     }
     timer1 = setInterval(GameOver, 10);
 }
+
+/**When the game is over, reload the game canvas.*/
 function GameOver() {
     document.location.reload();
 }
+
+/**Do not use this method - take out?*/
 function updateScore() {
     ctx.font = "30px Impact";
     ctx.fillStyle = "black";
     ctx.fillText("Score : " + Score, 25, 25);
 }
+
+/**Drawing the "sketch" following the user's drawer? NEED ZACH*/
 function drawSnake() {
     
     ctx.beginPath();
@@ -106,6 +128,8 @@ function drawSnake() {
     ctx.closePath();
     
 }
+
+/**NEED ZACH*/
 function drawSketch() {
 
     
@@ -123,6 +147,8 @@ function drawSketch() {
     }
     
 }
+
+/**Refresh the game canvas, called when the user presses 'r'.*/
 function refresh() {
     for (k = 0; k < 88; k++) {
         for (l = 0; l < 88; l++) {
@@ -131,6 +157,8 @@ function refresh() {
         }
     }
 }
+
+/**NEED ZACH*/
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     //updateScore();

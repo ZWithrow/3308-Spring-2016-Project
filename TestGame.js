@@ -1,4 +1,11 @@
-// JavaScript source code
+/**@file This is the javascript for the pong game (ball destroying blocks).
+* The space bar starts the game.
+* The left and right arrow keys move the paddle around the bottom of the canvas.
+* When the user destroys all the bricks, the canvas resets with new bricks, but with 
+* the ball going the same speed (the ball speeds up as the user plays).
+* The user plays until the ball does not hit the paddle controlled by the user. */
+
+/**Game canvas (square the game is displayed on on the HTML page)*/
 var canvas = document.getElementById("myCanvas2");
 var ctx = canvas.getContext("2d");
 var x = canvas.width / 2;
@@ -29,12 +36,11 @@ for (c = 0; c < brickColumnCount; c++) {
         bricks[c][r] = { x: 0, y: 0, status: 1 };
     }
 }
-
+ /**Listening for user key strokes*/
 document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
-//fdsafdsa
+document.addEventListener("keyup", keyUpHandler, false);    
 
-
+/**Draw the ball.*/
 function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
@@ -42,6 +48,8 @@ function drawBall() {
     ctx.fill();
     ctx.closePath();
 }
+
+/**Draw the paddle.*/
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
@@ -50,11 +58,17 @@ function drawPaddle() {
     ctx.closePath();
 
 }
+
+/**Update the score.*/
 function updateScore() {
     ctx.font = "30px Impact";
     ctx.fillStyle = "black";
     ctx.fillText("Score : " + Score, 30, 40);
 }
+
+
+/**Seeing which, if any, keys are pressed.
+* Only dealing with right & left arrows and space bar.*/
 function keyDownHandler(e) {
     if (e.keyCode == 39) {
         rightPressed = true;
@@ -67,6 +81,9 @@ function keyDownHandler(e) {
     }
 }
 
+
+/**Seeing which, if any, keys are released.
+* Only dealing with left & right arrows.*/
 function keyUpHandler(e) {
     if (e.keyCode == 39) {
         rightPressed = false;
@@ -76,6 +93,8 @@ function keyUpHandler(e) {
     }
 
 }
+
+/**Drawing the bricks that the ball destroys.*/
 function drawBricks() {
     for (c = 0; c < brickColumnCount; c++) {
         for (r = 0; r < brickRowCount; r++) {
@@ -93,6 +112,9 @@ function drawBricks() {
         }
     }
 }
+
+/**Detecting if the ball collides with a brick.
+* If there is a collision, delete the brick.*/
 function collisionDetection() {
     for (c = 0; c < brickColumnCount; c++) {
         for (r = 0; r < brickRowCount; r++) {
@@ -107,6 +129,8 @@ function collisionDetection() {
         }
     }
 }
+
+/**When all the bricks are gone, reset the canvas with new bricks.*/
 function AllBricksGone() {
     for (c = 0; c < brickColumnCount; c++) {
         for (r = 0; r < brickRowCount; r++) {
@@ -124,7 +148,7 @@ function AllBricksGone() {
         }
     }
     
-
+/**When the space bar is pressed, start the game (start moving the ball).*/
 function spaceBar() {
     if (space == false) {
         setTimeout(spaceBar, 50);
@@ -136,6 +160,8 @@ function spaceBar() {
     
 
 }
+
+/**NEED ZACH*/
 function finalWait() {
     if (space == false) {
         setTimeout(finalWait, 50);
@@ -144,9 +170,13 @@ function finalWait() {
     }
     timer1 = setInterval(GameOver, 10);
 }
+
+/**When game is over, reload the game canvas.*/
 function GameOver() {
     document.location.reload();
 }
+
+/**NEED ZACH*/
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     if (START == true) {

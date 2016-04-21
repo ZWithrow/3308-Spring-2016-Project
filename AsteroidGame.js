@@ -1,4 +1,11 @@
 /// JavaScript source code
+/**@file This is the javascript for the Asteroid Game.
+* The user is a ship and have a continuous stream of differently-sized asteroids coming toward you.
+* Space bar starts the game and shoots a laser from the front of the ship.
+* The up and down arrow keys move the ship up a down.
+* The user plays until the ship gets hit by an asteroid, upon which the game resets. */
+
+/**Game canvas (square the game is displayed on on the HTML page)*/
 var canvas = document.getElementById("myCanvas1");
 var ctx = canvas.getContext("2d");
 var x = canvas.width / 2;
@@ -26,9 +33,11 @@ for (b = 0; b <= 399; b++) {
     asteroids[b] = { x: 600, y: 600, dx: 1 * Math.floor((Math.random() * 4) + 1), hit: false, Xsize: Math.random() * 20 + 10, Ysize: Math.random() * 20 + 10 };
 }
 
+/**Listening for user key strokes*/
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
+/**Drawing the ship*/
 function drawShip() {
     ctx.beginPath();
     ctx.rect(shipPlacementX, shipPlacementY, shipWidth, shipHeight);
@@ -41,6 +50,8 @@ function drawShip() {
     ctx.closePath();
 }
 
+/**Seeing which, if any, keys are pressed.
+* Only dealing with up & down arrows and space bar.*/
 function keyDownHandler(e) {
     if (e.keyCode == 38) {
         upPressed = true;
@@ -53,6 +64,9 @@ function keyDownHandler(e) {
         spaceStop = true;
     }
 }
+
+/**See which, if any, keys have been released.
+* Only dealing with up & down arrows and space bar.*/
 function keyUpHandler(e) {
     if (e.keyCode == 38) {
         upPressed = false;
@@ -65,6 +79,8 @@ function keyUpHandler(e) {
 
     }
 }
+
+/**When the space bar is pressed, start the game (start asteroids).*/
 function spaceBar() {
     if (spaceStop == false) {
         setTimeout(spaceBar, 50);
@@ -74,6 +90,8 @@ function spaceBar() {
     START = false;
     timer1 = setInterval(draw, 10);
 }
+
+
 function finalWait() {
     if (spaceStop == false) {
         setTimeout(finalWait, 50);
@@ -82,6 +100,9 @@ function finalWait() {
     }
     timer1 = setInterval(GameOver, 10);
 }
+
+/**Shooting a laser from the ship's point,
+* have to get the ship's position*/
 function fireLaser() {
     if (space == true) {
         if (LaserCounter == 100) {
@@ -95,6 +116,9 @@ function fireLaser() {
         timer++;
     }
 }
+
+/**Determining the laser's path
+* and showing it*/
 function showLasers() {
     var i = 0;
 
@@ -114,6 +138,8 @@ function showLasers() {
     }
 
 }
+
+/**Draw an asteroid, randomly sized*/
 function makeAsteroid() {
     if (asteroidCounter == 400) {
         asteroidCounter = 0;
@@ -127,6 +153,9 @@ function makeAsteroid() {
     timer2++;
     
 }
+
+/**Determing the laser's path
+* and showing it*/
 function showAsteroids() {
     var i = 0;
 
@@ -147,9 +176,15 @@ function showAsteroids() {
         i++;
     }
 }
+
+/**When the game is over, reload the canvas*/
 function GameOver() {
     document.location.reload();
 }
+
+/**Continuously detecting for a collision
+* between the ship and oncoming asteroids.
+* If a collision is detected, freeze the frame and display GAME OVER.*/
 function collisionDetection() {
     for (a = 0; a < 100; a++) {
         for (l = 0; l < 100; l++) {
@@ -178,11 +213,15 @@ function collisionDetection() {
         
     }
 }
+
+/**If an asteroid is hit, update the score by NEED ZACH*/
 function updateScore() {
     ctx.font = "30px Impact";
     ctx.fillStyle = "black";
     ctx.fillText("Score : " + Score, 25, 25);
 }
+
+/**Draw something NEED ZACH*/
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     updateScore();
