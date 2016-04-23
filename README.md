@@ -9,27 +9,27 @@ Final Project for CSCI 3308
 
   This repository contains a Google Chrome extension of three arcade-style games that users can use with or without internet. Enabling this extension causes a party-hat icon to appear at the top right of your Chrome browser. Clicking on this icon shows a pop-down window that displays your internet status (online or offline) and three buttons (each one will take you a different game).
 
-######Vision statement
+######**Vision statement**
   Provide short, simple games to entertain internet users even when their network connection is down, as well as provide status updates so they know when they can continue their normal internet use. 
 
-######Objectives
+######**Objectives**
   Create Google Chrome extention for when internet is down
   
-######Motivations
+######**Motivations**
   Fun for times when internet is down, while testing several different methods
   Way to interface with ubiquitous software
   
-######Risk
+######**Risk**
   New software for all team members.
   Some team members unexperienced with git.
   First experiences with chrome extentions.
   Majority of the team has not done web developement.
   
-######Risk mitigation stategy
+######**Risk mitigation stategy**
   Preemptive research.
   Allocate tasks based on member's skill sets.
   
-######Requirements for Game
+#####Requirements for Game
 
  Requirement ID | Story Points | User Requirements
 --------------- | -------------- | -------------- 
