@@ -1,6 +1,6 @@
 #Party Time for Those Offline
 ### 3308-Spring-2016-Project
-Final Project for CSCI 3308
+Final Project for University of Colorado Boulder Software Development Methods and Tools (CSCI 3308)
 
 **Project Members:** Matt Wright (wrightMatthew), Michael Feller(Interfeller), Emma Montross(ermontross), Zach Withrow(ZWithrow)
 
