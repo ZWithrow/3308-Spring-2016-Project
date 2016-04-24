@@ -15,8 +15,14 @@ h2 {
 
 .icon{
 	display: block;
-	margin-left: 0 auto;
-	margin-right: 0 auto;
+	margin-left: 438px;
+	float:left;
+}
+
+.homeIcon{
+	padding-top: 25px;
+	float:left;
+	margin-left: 40px;
 }
 
 canvas {
