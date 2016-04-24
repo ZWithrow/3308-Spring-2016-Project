@@ -1,5 +1,5 @@
 /// JavaScript source code
-/**@file This is the javascript for the etch-e-sketch game.
+/**@file This is the javascript for the etch-a-sketch game.
 * The four arrow keys cause the drawer to move, leaving a "sketch" behind it.
 * The space bar starts the game. The letter r resets the canvas to blank.
 * The user plays until he/she wants to stop (presses r).*/
