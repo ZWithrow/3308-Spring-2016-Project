@@ -10,7 +10,13 @@
 }
 
 h2 {
-	font-family: Raleway, sans-serif;
+	font-family: Tahoma, sans-serif;
+	font-size: 2.5em;
+}
+
+h3 {
+	font-family: "Comic Sans MS", sans-serif;
+	font-size: 1.5em;
 }
 
 .icon{
@@ -20,7 +26,7 @@ h2 {
 }
 
 .homeIcon{
-	padding-top: 25px;
+	padding-top: 20px;
 	float:left;
 	margin-left: 40px;
 }
