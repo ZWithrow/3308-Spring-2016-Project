@@ -96,7 +96,8 @@ function spaceBar() {
     timer1 = setInterval(draw, 40);
 }
 
-/**NEED ZACH*/
+/**when the game is lost, wait 50ms instead of 10ms and then check for space bar, 
+when space is pressed load function GameOver*/
 function finalWait() {
     if (spaceStop == false) {
         setTimeout(finalWait, 50);
@@ -111,15 +112,9 @@ function GameOver() {
     document.location.reload();
 }
 
-/**Do not use this method - take out?*/
-function updateScore() {
-    ctx.font = "30px Impact";
-    ctx.fillStyle = "black";
-    ctx.fillText("Score : " + Score, 25, 25);
-}
 
 /**Drawing the "sketch" following the user's drawer? NEED ZACH*/
-function drawSnake() {
+function cursor() {
     
     ctx.beginPath();
     ctx.rect(SnakeButts[0].x, SnakeButts[0].y, snakeButtSize, snakeButtSize);
@@ -129,7 +124,7 @@ function drawSnake() {
     
 }
 
-/**NEED ZACH*/
+/**Checks all the 5x5 pixels in 2D array Pixels and if true shows them on the canvas */
 function drawSketch() {
 
     
@@ -158,10 +153,14 @@ function refresh() {
     }
 }
 
-/**NEED ZACH*/
+/**Main function that controls canvas visuals. 
+* Shows the Starting instructions and the controls. 
+* Refreshes page if Reset == true. 
+* Looks for the direction variables and moves 5 pixels accordingly.
+* Initiates the cursor and drawSketch functions. 
+* Takes the position of the cursor and makes the corresponding 5x5 pixel .showPixel == true*/
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    //updateScore();
     if (START == true) {
         ctx.font = "55px Impact";
         ctx.fillText("Start Game", 480 / 2 - 125, 480 / 2);
@@ -181,7 +180,7 @@ function draw() {
     
     
     drawSketch();
-    drawSnake();
+    cursor();
     if (downPressed && SnakeButts[0].y < canvas.height - snakeButtSize - 20) {
         SnakeButts[0].y += 5;
     }
@@ -201,4 +200,5 @@ function draw() {
     
     
 }
+//** Re-runs the function draw() every 40 ms*/
 var timer1 = setInterval(draw, 40);

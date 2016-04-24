@@ -214,14 +214,19 @@ function collisionDetection() {
     }
 }
 
-/**If an asteroid is hit, update the score by NEED ZACH*/
+/**Shows score on upper left side of canvas*/
 function updateScore() {
     ctx.font = "30px Impact";
     ctx.fillStyle = "black";
     ctx.fillText("Score : " + Score, 25, 25);
 }
 
-/**Draw something NEED ZACH*/
+/**Main function that controls canvas visuals. 
+* Shows the Starting instructions and the Score.
+* Controls the timing between each laser and each asteroid.
+* Increases the number of asteroids based on the users score.
+* Checks the functions for collisions, asteroids, and lasers.
+* Moves the Ship based on the keys pressed. */
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     updateScore();
@@ -285,4 +290,6 @@ function draw() {
     
     laserX += 1;
 }
+//** Re-runs the function draw() every 10 ms*/
+
 var timer1 = setInterval(draw, 10);

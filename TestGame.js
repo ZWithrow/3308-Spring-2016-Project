@@ -161,7 +161,8 @@ function spaceBar() {
 
 }
 
-/**NEED ZACH*/
+/**when the game is lost, wait 50ms instead of 10ms and then check for space bar, 
+when space is pressed load function GameOver*/
 function finalWait() {
     if (space == false) {
         setTimeout(finalWait, 50);
@@ -176,7 +177,12 @@ function GameOver() {
     document.location.reload();
 }
 
-/**NEED ZACH*/
+/**Main function that controls canvas visuals. 
+* Controls the Starting and GameOver instructions. 
+* Runs the scoreboard, the ball, the paddle, and the bricks. 
+* Checks for the number of bricks and the collisions. 
+* Changes the velocity of the ball When it hits the paddle or a border.
+* Speeds up the ball and paddle as the game progresses*/
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     if (START == true) {
@@ -236,4 +242,5 @@ function draw() {
     y += dy;
     
 }
+//** Re-runs the function draw() every 10 ms*/
 var timer1 = setInterval(draw, 10);
