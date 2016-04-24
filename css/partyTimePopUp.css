@@ -5,15 +5,14 @@
 
 
 .popUpContainer{
-	width: 400px;
+	width: 300px;
 	height: 150px;
 	background:lightblue;
-	text-indent: 50px;
 }
 
 .internetContainer{
-	width: 400px;
-	height: 200px;
+	height: 60px;
+	vertical-align: middle;
 	text-align: center;
 }
 
