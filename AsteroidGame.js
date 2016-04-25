@@ -105,7 +105,7 @@ function finalWait() {
 * have to get the ship's position*/
 function fireLaser() {
     if (space == true) {
-        if (LaserCounter == 100) {
+        if (LaserCounter == 400) {
             LaserCounter = 0;
         }
         var lx = shipPlacementX + 50;
@@ -186,8 +186,8 @@ function GameOver() {
 * between the ship and oncoming asteroids.
 * If a collision is detected, freeze the frame and display GAME OVER.*/
 function collisionDetection() {
-    for (a = 0; a < 100; a++) {
-        for (l = 0; l < 100; l++) {
+    for (a = 0; a < 400; a++) {
+        for (l = 0; l < 400; l++) {
             var Laser = Lasers[l];
             var Aster = asteroids[a];
             if (Laser.hit == false && Aster.hit == false) {
