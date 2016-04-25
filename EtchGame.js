@@ -14,7 +14,8 @@ var downPressed = false;
 var upPressed = false;
 var rightPressed = false;
 var leftPressed = false;
-var Reset = false
+var Reset = false;
+var Erase = false;
 
 var snakeButtSize = 5;
 var numOfSnakeButts = 1;
@@ -60,6 +61,9 @@ function keyDownHandler(e) {
     if (e.keyCode == 82) {
         Reset = true;
     }
+    if (e.keyCode == 69) {
+        Erase = true;
+    }
 }
 
 /**See which, if any, keys have been released.
@@ -82,6 +86,9 @@ function keyUpHandler(e) {
     }
     if (e.keyCode == 82) {
         Reset = false;
+    }
+    if (e.keyCode == 69) {
+        Erase = false;
     }
 }
 
@@ -167,10 +174,7 @@ function draw() {
         ctx.font = "20px Impact";
         ctx.fillText("by pressing SPACEBAR", 480 / 2 - 90, 480 / 2 + 30);
     }
-    else {
-        ctx.font = "20px Impact";
-        ctx.fillText("Use arrows to move.......Press 'r' to refresh the page", 33, 480 - 5);
-    }
+    
     if (Reset == true){
         refresh();
     }
@@ -195,7 +199,13 @@ function draw() {
     }
     var newX = (SnakeButts[0].x - 20) / 5;
     var newY = (SnakeButts[0].y - 20) / 5;
-    Pixels[newX][newY].showPixel = true;
+    if (Erase == true) {
+        Pixels[newX][newY].showPixel = false;
+    }
+    else {
+        Pixels[newX][newY].showPixel = true;
+    }
+    
 
     
     
