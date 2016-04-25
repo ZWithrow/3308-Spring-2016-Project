@@ -3,6 +3,7 @@
   "description": "This is the Final Project Code",
   "icons": { "16": "images/AwesomeLogo2.png"},
   "version": "1.0",
+  "short_name": "Party Time",
   "manifest_version":  2,
 
   "browser_action": {
