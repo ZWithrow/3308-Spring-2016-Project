@@ -1,6 +1,6 @@
 {
   "name": "Party Time for those Offline",
-  "description": "This is the Final Project Code",
+  "description": "A simple extension for procrastination",
   "icons": { "16": "images/AwesomeLogo2.png"},
   "version": "1.0.0.1",
   "short_name": "Party Time",
