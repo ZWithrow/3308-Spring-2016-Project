@@ -1,14 +1,11 @@
 {
   "name": "Party Time for those Offline",
+  "description": "This is the Final Project Code",
+  "icons": { "16": "images/AwesomeLogo2.png"},
   "version": "1.0",
   "manifest_version":  2,
-  "description": "This is the Final Project Code",
 
   "browser_action": {
-    "default_icon": {                    // optional
-      "19": "images/AwesomeLogo2.png"    // optional
-    },
-    
     "default_popup": "partyTimePopUp.html"
   }
 }
