@@ -143,10 +143,10 @@ function AllBricksGone() {
         }
     }
     gameFrameMode++;
-    if (gameFrameMode == 2) {
+    if (gameFrameMode == 3) {
         gameFrameMode = 0;
     }
-    if (gameFrameMode = 0) {
+    if (gameFrameMode == 0) {
         for (A = 0; A < brickColumnCount; A++) {
             for (B = 0; B < brickRowCount; B++) {
                 bricks[A][B].status = 1;
@@ -155,7 +155,7 @@ function AllBricksGone() {
         }
 
     }
-    else {
+    else if (gameFrameMode == 1) {
         bricks[0][0].status = 1;
         bricks[1][0].status = 1;
         bricks[2][0].status = 1;
@@ -168,6 +168,17 @@ function AllBricksGone() {
         bricks[0][2].status = 1;
         bricks[4][2].status = 1;
         
+    }
+    else {
+        bricks[0][0].status = 1;
+        bricks[1][0].status = 1;
+        bricks[2][0].status = 1;
+        bricks[3][0].status = 1;
+        bricks[4][0].status = 1;
+        bricks[1][1].status = 1;
+        bricks[2][1].status = 1;
+        bricks[3][1].status = 1;
+        bricks[2][2].status = 1;
     }
 }
     
@@ -233,7 +244,7 @@ function draw() {
     }
     else if (y + dy > canvas.height - ballRadius) {
         if (x > paddleX && x < paddleX + paddleWidth) {
-            dy = -(dy)-0.5;
+            dy = -(dy)-0.2;
             if (paddleX + (paddleWidth / 2) >= x) {
                 dx -= (x / (paddleX + (paddleWidth / 2))) * 0.5;
             }
