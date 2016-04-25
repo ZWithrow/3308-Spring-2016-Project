@@ -8,6 +8,9 @@ Final Project for University of Colorado Boulder Software Development Methods an
   *Idle Entertainment presents: Party Time for Those Offline.*
 
   This repository contains a Google Chrome extension of three arcade-style games that users can use with or without internet. Enabling this extension causes a party-hat icon to appear at the top right of your Chrome browser. Clicking on this icon shows a pop-down window that displays your internet status (online or offline) and three buttons (each one will take you a different game).
+  
+#####How to Get it
+  Our extension is available in the Google Chrome Store under "Party Time for those Offline" for FREE. Enjoy!
 
 #####Vision statement
   Provide short, simple games to entertain internet users even when their network connection is down, as well as provide status updates so they know when they can continue their normal internet use. 
