@@ -2,7 +2,7 @@
   "name": "Party Time for those Offline",
   "description": "This is the Final Project Code",
   "icons": { "16": "images/AwesomeLogo2.png"},
-  "version": "1.0",
+  "version": "1.0.0.1",
   "short_name": "Party Time",
   "manifest_version":  2,
 
