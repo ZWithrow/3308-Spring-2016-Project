@@ -29,6 +29,7 @@ var bricks = [];
 var space = false;
 var Score = 0;
 var START = true;
+var gameFrameMode = 0;
 var paddleAcceleration = 0;
 for (c = 0; c < brickColumnCount; c++) {
     bricks[c] = [];
@@ -113,6 +114,7 @@ function drawBricks() {
     }
 }
 
+
 /**Detecting if the ball collides with a brick.
 * If there is a collision, delete the brick.*/
 function collisionDetection() {
@@ -136,17 +138,38 @@ function AllBricksGone() {
         for (r = 0; r < brickRowCount; r++) {
             var b = bricks[c][r];
             if (b.status == 1) {
-                    return
-                }
-            }
-        }
-    for (A = 0; A < brickColumnCount; A++) {
-        for (B = 0; B < brickRowCount; B++) {
-            bricks[A][B].status = 1;
-            
+                return
             }
         }
     }
+    gameFrameMode++;
+    if (gameFrameMode == 2) {
+        gameFrameMode = 0;
+    }
+    if (gameFrameMode = 0) {
+        for (A = 0; A < brickColumnCount; A++) {
+            for (B = 0; B < brickRowCount; B++) {
+                bricks[A][B].status = 1;
+
+            }
+        }
+
+    }
+    else {
+        bricks[0][0].status = 1;
+        bricks[1][0].status = 1;
+        bricks[2][0].status = 1;
+        bricks[3][0].status = 1;
+        bricks[4][0].status = 1;
+        bricks[0][1].status = 1;
+        bricks[1][1].status = 1;
+        bricks[3][1].status = 1;
+        bricks[4][1].status = 1;
+        bricks[0][2].status = 1;
+        bricks[4][2].status = 1;
+        
+    }
+}
     
 /**When the space bar is pressed, start the game (start moving the ball).*/
 function spaceBar() {
@@ -198,7 +221,9 @@ function draw() {
     drawBall();
     drawPaddle();
     AllBricksGone();
+   
     drawBricks();
+    
     collisionDetection();
     if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
         dx = -dx;
