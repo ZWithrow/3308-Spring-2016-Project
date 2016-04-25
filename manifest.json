@@ -2,7 +2,7 @@
   "name": "Party Time for those Offline",
   "description": "A simple extension for procrastination",
   "icons": { "16": "images/AwesomeLogo2.png"},
-  "version": "1.0.0.1",
+  "version": "1.0.0.2",
   "short_name": "Party Time",
   "manifest_version":  2,
 
